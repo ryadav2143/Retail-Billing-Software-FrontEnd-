@@ -2,6 +2,7 @@ import './CategoryList.css'
 import {useContext, useState} from "react";
 import {AppContext} from "../../context/AppContext.jsx";
 import {deleteCategory} from "../../service/CategoryService.js";
+import toast from "react-hot-toast";
 
 const CategoryList = () => {
     const {categories,setCategories}=useContext(AppContext);
@@ -15,11 +16,14 @@ const CategoryList = () => {
             if(response.status===204){
                 const updatedCategories=categories.filter(category=>category.categoryId !== categoryId);
                 setCategories(updatedCategories);
+                toast.success("Category deleted");
             }else
-            { /* empty */
+            {
+                toast.error(response.statusText);
             }
         }catch (error){
-            console.log(error)
+            toast.error(error.message);
+
         }
 
     }

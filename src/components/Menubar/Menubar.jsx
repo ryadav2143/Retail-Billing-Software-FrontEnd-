@@ -20,13 +20,13 @@ const Menubar = () => {
                             <Link className="nav-link" to="/explore">Explore</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/manageItems">Manage Items</Link>
+                            <Link className="nav-link" to="/items">Manage Items</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/manageCategories">Manage Categories</Link>
+                            <Link className="nav-link" to="/categories">Manage Categories</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/manageUsers">Manage Users</Link>
+                            <Link className="nav-link" to="/users">Manage Users</Link>
                         </li>
                     </ul>
                 </div>
